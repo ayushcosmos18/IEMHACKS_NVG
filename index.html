@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     
@@ -16,12 +18,14 @@
         <nav>
             <a href="index.html"><img src="" alt=""></a>
             <div id="navlinks">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
                 <ul>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="">BLOGS</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showmenu()"></i>
         </nav>
 
     <div id="textbox">
@@ -32,7 +36,62 @@
     </section>
 
 
+    <section class="Sex">
+        <h1>Informed. Empowered. Confident. Relationships.</h1>
+        <p>By becoming informed, individuals empower themselves with the confidence to navigate relationships, fostering understanding, respect, and the ability to make informed and empowered choices.</p>
 
-    <script src="script.js"></script>
+        <div class="row">
+            <div class="coloumn">
+                <h3>Consent</h3>
+                <p>Understanding and practicing consent is at the core of respectful relationships. It's about ensuring that all parties involved willingly and enthusiastically agree to any intimate activity. Learning about the nuances of verbal and non-verbal cues for consent empowers individuals to establish boundaries and communicate effectively, fostering an environment of trust and safety.</p>
+            </div>
+            <div class="coloumn">
+                <h3>STIs</h3>
+                <p>Knowledge about sexually transmitted infections (STIs) is crucial for maintaining one's sexual health. Comprehensive sex education equips individuals with information about different types of STIs, their transmission modes, and prevention methods. This knowledge promotes responsible sexual behavior, encourages the use of barrier methods like condoms, and emphasizes regular testing to ensure early detection and treatment.</p>
+            </div>
+            <div class="coloumn">
+                <h3>Healthy Relationships</h3>
+                <p>Sex education extends beyond the physical aspects to encompass emotional and psychological well-being within relationships. Learning about healthy relationships involves understanding mutual respect, effective communication, conflict resolution, and the importance of maintaining individual identities. This knowledge helps individuals make informed decisions about their partners and contributes to building long-lasting, supportive relationships.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="blogs">
+        <h1>BLOGS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, </p>
+
+        <div  class="row" >
+            <div class="coloumb" id="clicableDiv1">
+                <img src="https://feminisminindia.com/wp-content/uploads/2020/03/KwTddErSlVRnmRZ-800x450-noPad.jpg" alt="">
+                <div class="layer">
+                    <h3>Lack Of Sex Education</h3>
+                </div>
+            </div>
+
+            <div class="coloumb" id="clicableDiv2">
+                <img src="https://borgenproject.org/wp-content/uploads/india_gender_justice_equality_women_equal_asia_human_rights_international_aid_opt.jpg" alt="">
+                <div class="layer">
+                    <h3>Gender Disparities</h3>
+                </div>
+            </div>
+
+            <div class="coloumb" id="clicableDiv3">
+                <img src="data:image/png;base64,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" alt="">
+                <div class="layer">
+                    <h3>Lack Of Sex Education</h3>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+
+
+    <script src="script.js">
+      
+    </script>
 </body>
 </html>
